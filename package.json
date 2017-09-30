@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Exposes the core/internal modules from react-dom lib.",
   "author": "Mark <mark@remarkablemark.org>",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/remarkablemark/react-dom-core"
@@ -15,5 +16,8 @@
     "react-dom",
     "react-dom-core"
   ],
+  "devDependencies": {
+    "react-dom": "^15"
+  },
   "license": "MIT"
 }
