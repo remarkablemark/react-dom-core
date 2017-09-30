@@ -1,0 +1,19 @@
+{
+  "name": "react-dom-core",
+  "version": "0.0.0",
+  "description": "Exposes the core/internal modules from react-dom lib.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/react-dom-core"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/react-dom-core/issues"
+  },
+  "keywords": [
+    "react",
+    "react-dom",
+    "react-dom-core"
+  ],
+  "license": "MIT"
+}
