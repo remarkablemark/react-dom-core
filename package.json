@@ -1,6 +1,6 @@
 {
   "name": "react-dom-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Exposes the core/internal modules from react-dom lib.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
