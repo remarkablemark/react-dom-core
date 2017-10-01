@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "Exposes the core/internal modules from react-dom lib.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "copy": "cp -r node_modules/react-dom/lib/. lib"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/remarkablemark/react-dom-core"
