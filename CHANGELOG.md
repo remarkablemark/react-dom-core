@@ -1,6 +1,6 @@
 # Change Log
 
-# Unreleased
+# [0.0.1](https://github.com/remarkablemark/react-dom-core/tree/v0.0.1) (2017-09-30)
 
 ### Features
 
