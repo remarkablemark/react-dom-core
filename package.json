@@ -19,6 +19,11 @@
     "react-dom",
     "react-dom-core"
   ],
+  "optionalDependencies": {
+    "fbjs": "*",
+    "object-assign": "*",
+    "react": "*"
+  },
   "devDependencies": {
     "react-dom": "^15"
   },
