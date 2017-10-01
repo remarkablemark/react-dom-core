@@ -21,6 +21,9 @@
     "react-dom",
     "react-dom-core"
   ],
+  "files": [
+    "lib"
+  ],
   "optionalDependencies": {
     "fbjs": "*",
     "object-assign": "*",
