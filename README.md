@@ -1,7 +1,6 @@
 # react-dom-core
 
 [![NPM](https://nodei.co/npm/react-dom-core.png)](https://nodei.co/npm/react-dom-core/)
-
 [![NPM version](https://img.shields.io/npm/v/react-dom-core.svg)](https://www.npmjs.com/package/react-dom-core)
 
 A package that exposes the [core/internals](https://unpkg.com/react-dom@15/lib/) of [react-dom](https://www.npmjs.com/package/react-dom).
@@ -43,4 +42,4 @@ import SVGDOMPropertyConfig from 'react-dom-core/lib/SVGDOMPropertyConfig';
 
 ## License
 
-[MIT](https://github.com/remarkablemark/react-dom-core/blob/master/LICENSE)
+See [license](https://github.com/facebook/react#license) from original project.
