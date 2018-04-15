@@ -4,7 +4,7 @@
   "description": "Exposes the core/internal modules from react-dom lib.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
-    "prepublish": "npm run clean && npm run copy",
+    "prepublishOnly": "npm run clean && npm run copy",
     "clean": "rm -rf lib",
     "copy": "cp -r node_modules/react-dom/lib/. lib",
     "changelog": "conventional-changelog -p angular -o CHANGELOG.md -s"
