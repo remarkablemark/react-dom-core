@@ -1,28 +1,25 @@
 # react-dom-core
 
 [![NPM](https://nodei.co/npm/react-dom-core.png)](https://nodei.co/npm/react-dom-core/)
+
 [![NPM version](https://img.shields.io/npm/v/react-dom-core.svg)](https://www.npmjs.com/package/react-dom-core)
+[![Dependency status](https://david-dm.org/remarkablemark/react-dom-core.svg)](https://david-dm.org/remarkablemark/react-dom-core)
 
-A package that exposes the [core/internals](https://unpkg.com/react-dom@15/lib/) of [react-dom](https://www.npmjs.com/package/react-dom).
+A package that exposes the core/internals of [react-dom@15](https://unpkg.com/react-dom@15/lib/).
 
-## Installation
-
-[NPM](https://www.npmjs.com/package/react-dom-core):
+## Install
 
 ```sh
+# with npm
 npm install react-dom-core --save
-```
 
-[Yarn](https://yarnpkg.com/en/package/react-dom-core):
-
-```sh
+# with yarn
 yarn add react-dom-core
 ```
 
-You may also need to install one or more optional dependencies:
+Additional modules may be installed:
 - [fbjs](https://www.npmjs.com/package/fbjs)
 - [object-assign](https://www.npmjs.com/package/object-assign)
-- [react](https://www.npmjs.com/package/react)
 
 ## Usage
 
