@@ -27,14 +27,6 @@
   "dependencies": {
     "react": "15"
   },
-  "peerDependencies": {
-    "fbjs": "*",
-    "object-assign": "*"
-  },
-  "optionalDependencies": {
-    "fbjs": "*",
-    "object-assign": "*"
-  },
   "devDependencies": {
     "react-dom": "^15",
     "standard-version": "^4.3.0"
