@@ -28,6 +28,9 @@
     "react": "15"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "husky": "^2.3.0",
     "react-dom": "^15",
     "standard-version": "^4.3.0"
   },
