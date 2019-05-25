@@ -1,39 +1,16 @@
 {
-  "name": "react-dom-core",
-  "version": "0.0.4",
-  "description": "Exposes the core/internal modules from react-dom lib.",
-  "author": "Mark <mark@remarkablemark.org>",
+  "private": "true",
   "scripts": {
-    "prepublishOnly": "npm run clean && npm run copy",
-    "clean": "rm -rf lib",
-    "copy": "cp -r node_modules/react-dom/lib/. lib",
-    "release": "standard-version"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/remarkablemark/react-dom-core"
-  },
-  "bugs": {
-    "url": "https://github.com/remarkablemark/react-dom-core/issues"
-  },
-  "keywords": [
-    "react",
-    "react-dom",
-    "react-dom-core"
-  ],
-  "files": [
-    "lib"
-  ],
-  "dependencies": {
-    "react": "15"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "release": "lerna publish",
+    "updated": "lerna updated"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
     "@commitlint/config-conventional": "^7.6.0",
     "husky": "^2.3.0",
-    "lerna": "^3.14.1",
-    "react-dom": "^15",
-    "standard-version": "^4.3.0"
+    "lerna": "^3.14.1"
   },
   "license": "MIT"
 }
