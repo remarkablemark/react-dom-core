@@ -1,0 +1,37 @@
+{
+  "name": "react-dom-core",
+  "version": "0.0.4",
+  "description": "Copy of react-dom 15",
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run copy",
+    "clean": "rm -rf dist lib index.js server.js test-utils.js",
+    "copy": "cp -r node_modules/react-dom/{dist,lib,index.js,server.js,test-utils.js} ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/react-dom-core"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/react-dom-core/issues"
+  },
+  "keywords": [
+    "react",
+    "react-15",
+    "react-dom",
+    "react-dom-core"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "index.js",
+    "server.js",
+    "test-utils.js"
+  ],
+  "dependencies": {
+    "react-15": "0.0.0"
+  },
+  "devDependencies": {
+    "react-dom": "^15"
+  },
+  "license": "MIT"
+}
