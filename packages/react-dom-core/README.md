@@ -1,6 +1,7 @@
 # react-dom-core
 
 [![NPM](https://nodei.co/npm/react-dom-core.png)](https://nodei.co/npm/react-dom-core/)
+
 [![NPM version](https://img.shields.io/npm/v/react-dom-core.svg)](https://www.npmjs.com/package/react-dom-core)
 
 Copy of [react-dom@15](https://unpkg.com/react-dom@15/).

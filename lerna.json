@@ -4,6 +4,7 @@
     "publish": {
       "conventionalCommits": true,
       "exact": true,
+      "ignoreChanges": ["**/*.md"],
       "message": "chore(release): publish",
       "yes": true
     },
