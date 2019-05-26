@@ -1,6 +1,6 @@
 {
   "name": "react-dom-core",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Copy of react-dom 15",
   "scripts": {
     "prepublishOnly": "npm run clean && npm run copy && npm run replace",

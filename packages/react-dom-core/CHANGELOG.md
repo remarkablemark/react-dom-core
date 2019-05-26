@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/remarkablemark/react-dom-core/compare/react-dom-core@0.0.5...react-dom-core@0.1.0) (2019-05-26)
+
+
+### Features
+
+* **all:** add newline between badges ([a2d238d](https://github.com/remarkablemark/react-dom-core/commit/a2d238d))
+
+
+
+
+
 ## 0.0.5 (2019-05-26)
 
 **Note:** Version bump only for package react-dom-core
