@@ -1,6 +1,6 @@
 {
   "name": "react-15",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Copy of react 15",
   "scripts": {
     "prepublishOnly": "npm run clean && npm run copy",
