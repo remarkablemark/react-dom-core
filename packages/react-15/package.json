@@ -1,0 +1,31 @@
+{
+  "name": "react-15",
+  "version": "0.0.0",
+  "description": "Copy of react 15",
+  "scripts": {
+    "prepublishOnly": "npm run clean && npm run copy",
+    "clean": "rm -rf dist lib react.js",
+    "copy": "cp -r node_modules/react/{dist,lib,react.js} ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/react-dom-core"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/react-dom-core/issues"
+  },
+  "keywords": [
+    "react",
+    "react-15",
+    "react-dom-core"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "react.js"
+  ],
+  "devDependencies": {
+    "react": "^15"
+  },
+  "license": "MIT"
+}
