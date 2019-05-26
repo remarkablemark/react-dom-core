@@ -1,12 +1,11 @@
 {
   "name": "react-dom-core",
   "version": "0.0.4",
-  "description": "Exposes the core/internal modules from react-dom lib.",
-  "author": "Mark <mark@remarkablemark.org>",
+  "description": "Copy of react-dom 15",
   "scripts": {
     "prepublishOnly": "npm run clean && npm run copy",
-    "clean": "rm -rf lib",
-    "copy": "cp -r node_modules/react-dom/lib/. lib"
+    "clean": "rm -rf dist lib index.js server.js test-utils.js",
+    "copy": "cp -r node_modules/react-dom/{dist,lib,index.js,server.js,test-utils.js} ."
   },
   "repository": {
     "type": "git",
@@ -17,11 +16,16 @@
   },
   "keywords": [
     "react",
+    "react-15",
     "react-dom",
     "react-dom-core"
   ],
   "files": [
-    "lib"
+    "dist",
+    "lib",
+    "index.js",
+    "server.js",
+    "test-utils.js"
   ],
   "dependencies": {
     "react-15": "0.0.0"
