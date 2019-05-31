@@ -1,3 +1,11 @@
 {
-  "extends": ["@commitlint/config-conventional"]
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "scope-enum": [
+      2,
+      "always",
+      ["all", "react-15", "react-dom-core", "release", "root"]
+    ],
+    "scope-empty": [2, "never"]
+  }
 }
