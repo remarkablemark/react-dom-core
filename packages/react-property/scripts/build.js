@@ -55,15 +55,31 @@ try {
 }
 
 /**
+ * HTML DOM property config.
+ */
+const attributeToProperty = {};
+
+/**
  * List of HTML DOM attributes.
  */
 const attributes = [];
 
 Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
+  const propertyName = DOMProperty.getPossibleStandardName[attributeName];
+
+  if (attributeName !== propertyName) {
+    attributeToProperty[attributeName] = propertyName;
+  }
+
   attributes.push(attributeName);
 });
 
 fs.writeFileSync(
   path.resolve(HTML_DIR, 'attributes.json'),
   JSON.stringify(attributes)
+);
+
+fs.writeFileSync(
+  path.resolve(HTML_DIR, 'attribute-to-property.json'),
+  JSON.stringify(attributeToProperty)
 );
