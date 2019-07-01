@@ -23,5 +23,8 @@
   "files": [
     "/lib"
   ],
+  "devDependencies": {
+    "react-dom": "^15"
+  },
   "license": "MIT"
 }
