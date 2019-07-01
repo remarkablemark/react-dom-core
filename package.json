@@ -4,6 +4,8 @@
     "bootstrap": "lerna bootstrap",
     "changed": "lerna changed",
     "clean": "lerna clean",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
     "release": "lerna publish"
   },
   "devDependencies": {
