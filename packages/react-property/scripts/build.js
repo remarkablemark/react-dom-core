@@ -72,6 +72,13 @@ const attributes = [];
  */
 const booleanProperties = ['autoFocus'];
 
+/**
+ * HTML attributes that behave like booleans but can also accept a string value.
+ *
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L190-L193
+ */
+const overloadedBooleanProperties = [];
+
 Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
   const propertyName = DOMProperty.getPossibleStandardName[attributeName];
 
@@ -81,8 +88,12 @@ Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
 
   const property = DOMProperty.properties[propertyName];
 
-  if (property && property.hasBooleanValue) {
-    booleanProperties.push(propertyName);
+  if (property) {
+    if (property.hasBooleanValue) {
+      booleanProperties.push(propertyName);
+    } else if (property.hasOverloadedBooleanValue) {
+      overloadedBooleanProperties.push(propertyName);
+    }
   }
 
   attributes.push(attributeName);
@@ -101,4 +112,9 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.resolve(HTML_DIR, 'boolean-properties.json'),
   JSON.stringify(booleanProperties)
+);
+
+fs.writeFileSync(
+  path.resolve(HTML_DIR, 'overloaded-boolean-properties.json'),
+  JSON.stringify(overloadedBooleanProperties)
 );
