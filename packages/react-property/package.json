@@ -20,5 +20,8 @@
     "react",
     "react-dom"
   ],
+  "files": [
+    "/lib"
+  ],
   "license": "MIT"
 }
