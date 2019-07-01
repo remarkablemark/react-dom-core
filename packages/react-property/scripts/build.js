@@ -64,11 +64,25 @@ const attributeToProperty = {};
  */
 const attributes = [];
 
+/**
+ * `autoFocus` is predefined and excluded from `HTMLDOMPropertyConfig.js`.
+ *
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L42
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L206
+ */
+const booleanProperties = ['autoFocus'];
+
 Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
   const propertyName = DOMProperty.getPossibleStandardName[attributeName];
 
   if (attributeName !== propertyName) {
     attributeToProperty[attributeName] = propertyName;
+  }
+
+  const property = DOMProperty.properties[propertyName];
+
+  if (property && property.hasBooleanValue) {
+    booleanProperties.push(propertyName);
   }
 
   attributes.push(attributeName);
@@ -82,4 +96,9 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.resolve(HTML_DIR, 'attribute-to-property.json'),
   JSON.stringify(attributeToProperty)
+);
+
+fs.writeFileSync(
+  path.resolve(HTML_DIR, 'boolean-properties.json'),
+  JSON.stringify(booleanProperties)
 );
