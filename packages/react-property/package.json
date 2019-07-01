@@ -4,7 +4,8 @@
   "description": "HTML and SVG DOM property configs used by React.",
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "npm run clean && node scripts/build"
+    "build": "npm run clean && node scripts/build",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
