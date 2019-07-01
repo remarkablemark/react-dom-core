@@ -5,6 +5,8 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npm run clean && node scripts/build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "prepublishOnly": "npm run build"
   },
   "repository": {
