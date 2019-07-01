@@ -1,0 +1,24 @@
+{
+  "name": "react-property",
+  "version": "0.0.0",
+  "description": "HTML and SVG DOM property configs used by React.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/react-dom-core"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/react-dom-core/issues"
+  },
+  "keywords": [
+    "react-property",
+    "html",
+    "svg",
+    "dom",
+    "property",
+    "attribute",
+    "config",
+    "react",
+    "react-dom"
+  ],
+  "license": "MIT"
+}
