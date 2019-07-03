@@ -4,6 +4,7 @@ A monorepo containing the following packages:
 
 - [react-15](https://github.com/remarkablemark/react-dom-core/tree/master/packages/react-15)
 - [react-dom-core](https://github.com/remarkablemark/react-dom-core/tree/master/packages/react-dom-core)
+- [react-property](https://github.com/remarkablemark/react-dom-core/tree/master/packages/react-property)
 
 ## Prerequisites
 
