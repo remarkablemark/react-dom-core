@@ -2,6 +2,7 @@
   "name": "react-property",
   "version": "0.0.0",
   "description": "HTML and SVG DOM property configs used by React.",
+  "main": "index.js",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "npm run clean && npm run build:html && npm run build:svg",
