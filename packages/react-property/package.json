@@ -4,10 +4,11 @@
   "description": "HTML and SVG DOM property configs used by React.",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf lib",
-    "build": "npm run clean && npm run build:html && npm run build:svg",
+    "build": "npm run clean && npm run build:html && npm run build:svg && npm run copy",
     "build:html": "node scripts/build-html",
     "build:svg": "node scripts/build-svg",
+    "copy": "cp -r src/ lib/",
+    "clean": "rm -rf lib",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "npm run build"
