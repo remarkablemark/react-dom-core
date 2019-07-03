@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const DOMProperty = require('react-dom/lib/DOMProperty');
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
+const { LIB_DIR, HTML_DIR } = require('./constants');
 
 /**
  * Creates the DOM property map via injection.
@@ -10,7 +11,6 @@ const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
  *
  * ```js
  * {
- *   // ...
  *   properties: {
  *     accept: {
  *       attributeName: 'accept',
@@ -39,16 +39,15 @@ const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
 DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
 
 /**
- * Constants.
- */
-const LIB_DIR = path.resolve(__dirname, '../lib');
-const HTML_DIR = path.resolve(LIB_DIR, 'html');
-
-/**
  * Create output directories (if it does not exist).
  */
 try {
   fs.mkdirSync(LIB_DIR);
+} catch (error) {
+  // throw error;
+}
+
+try {
   fs.mkdirSync(HTML_DIR);
 } catch (error) {
   // throw error;

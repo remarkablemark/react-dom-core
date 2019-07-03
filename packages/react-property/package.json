@@ -4,7 +4,8 @@
   "description": "HTML and SVG DOM property configs used by React.",
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "npm run clean && node scripts/build",
+    "build": "npm run clean && npm run build:html",
+    "build:html": "node scripts/build-html",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "npm run build"
