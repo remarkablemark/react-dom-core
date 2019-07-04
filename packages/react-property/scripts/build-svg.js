@@ -20,13 +20,13 @@ delete DOMProperty.getPossibleStandardName.autofocus;
 try {
   fs.mkdirSync(LIB_DIR);
 } catch (error) {
-  // throw error;
+  if (error.code !== 'EEXIST') throw error;
 }
 
 try {
   fs.mkdirSync(SVG_DIR);
 } catch (error) {
-  // throw error;
+  if (error.code !== 'EEXIST') throw error;
 }
 
 /**

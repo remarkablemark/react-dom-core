@@ -44,13 +44,13 @@ DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
 try {
   fs.mkdirSync(LIB_DIR);
 } catch (error) {
-  // throw error;
+  if (error.code !== 'EEXIST') throw error;
 }
 
 try {
   fs.mkdirSync(HTML_DIR);
 } catch (error) {
-  // throw error;
+  if (error.code !== 'EEXIST') throw error;
 }
 
 /**
