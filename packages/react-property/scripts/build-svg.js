@@ -31,11 +31,17 @@ try {
 
 /**
  * SVG DOM property config.
+ *
+ * Contains a mapping of HTML attributes to React props.
+ *
+ * @type {Object}
  */
 const attributeToProperty = {};
 
 /**
  * List of SVG DOM attributes.
+ *
+ * @type {Array}
  */
 const attributes = [];
 

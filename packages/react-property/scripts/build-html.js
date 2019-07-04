@@ -55,11 +55,17 @@ try {
 
 /**
  * HTML DOM property config.
+ *
+ * Contains a mapping of HTML attributes to React props.
+ *
+ * @type {Object}
  */
 const attributeToProperty = {};
 
 /**
  * List of HTML DOM attributes.
+ *
+ * @type {Array}
  */
 const attributes = [];
 
@@ -68,6 +74,8 @@ const attributes = [];
  *
  * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L42
  * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L206
+ *
+ * @type {Array}
  */
 const booleanProperties = ['autoFocus'];
 
@@ -75,6 +83,8 @@ const booleanProperties = ['autoFocus'];
  * HTML attributes that behave like booleans but can also accept a string value.
  *
  * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L190-L193
+ *
+ * @type {Array}
  */
 const overloadedBooleanProperties = [];
 
