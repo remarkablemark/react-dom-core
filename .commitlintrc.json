@@ -4,7 +4,7 @@
     "scope-enum": [
       2,
       "always",
-      ["all", "react-15", "react-dom-core", "release", "root"]
+      ["all", "react-15", "react-dom-core", "react-property", "release", "root"]
     ],
     "scope-empty": [2, "never"]
   }
