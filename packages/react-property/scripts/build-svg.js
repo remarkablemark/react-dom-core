@@ -32,7 +32,7 @@ try {
 /**
  * SVG DOM property config.
  *
- * Contains a mapping of HTML attributes to React props.
+ * Contains a mapping of SVG attributes to React props.
  *
  * @type {Object}
  */
