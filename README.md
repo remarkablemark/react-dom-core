@@ -47,6 +47,18 @@ Remove `node_modules` from all packages:
 $ npm run clean
 ```
 
+Lint packages:
+
+```sh
+$ npm run lint
+```
+
+Run tests for packages:
+
+```sh
+$ npm test
+```
+
 Release and publish packages:
 
 ```sh
