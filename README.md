@@ -35,7 +35,13 @@ Link local packages and install remaining package dependencies:
 $ npm run bootstrap
 ```
 
-List local packages that have changed since last release:
+Build packages:
+
+```sh
+$ npm run build
+```
+
+List packages that have changed since last release:
 
 ```sh
 $ npm run changed
