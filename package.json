@@ -5,8 +5,8 @@
     "changed": "lerna changed",
     "clean": "lerna clean",
     "lint": "lerna run lint",
-    "lint:fix": "lerna run lint:fix",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.1",
