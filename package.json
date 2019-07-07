@@ -2,6 +2,7 @@
   "private": "true",
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "changed": "lerna changed",
     "clean": "lerna clean",
     "lint": "lerna run lint",
