@@ -15,7 +15,7 @@ describe('HTMLDOMPropertyConfig', () => {
         const attributeName =
           HTMLDOMPropertyConfig.DOMAttributeNames[propName] ||
           propName.toLowerCase();
-        expect(main.HTMLDOMPropertyConfig[attributeName]).toEqual(property);
+        expect(main.properties[attributeName]).toEqual(property);
       }
     );
   });
@@ -35,7 +35,7 @@ describe('SVGDOMPropertyConfig', () => {
         delete property.mutationMethod;
         const attributeName =
           SVGDOMPropertyConfig.DOMAttributeNames[propName] || propName;
-        expect(main.SVGDOMPropertyConfig[attributeName]).toEqual(property);
+        expect(main.properties[attributeName]).toEqual(property);
       }
     );
   });
