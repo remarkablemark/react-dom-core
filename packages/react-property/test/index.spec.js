@@ -1,27 +1,47 @@
-const DOMProperty = require('react-dom/lib/DOMProperty');
-const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
 const main = require('..');
 
 describe('HTMLDOMPropertyConfig', () => {
-  DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
+  jest.isolateModules(() => {
+    const DOMProperty = require('react-dom/lib/DOMProperty');
+    const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
+    DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
 
-  it.each(Object.keys(DOMProperty.properties))(
-    'matches property `%s` from react-dom',
-    propName => {
-      const property = DOMProperty.properties[propName];
-      delete property.attributeNamespace;
-      delete property.mutationMethod;
-      const attributeName =
-        HTMLDOMPropertyConfig.DOMAttributeNames[propName] ||
-        propName.toLowerCase();
-      expect(main.HTMLDOMPropertyConfig[attributeName]).toEqual(property);
-    }
-  );
+    it.each(Object.keys(DOMProperty.properties))(
+      'matches property `%s`',
+      propName => {
+        const property = DOMProperty.properties[propName];
+        delete property.attributeNamespace;
+        delete property.mutationMethod;
+        const attributeName =
+          HTMLDOMPropertyConfig.DOMAttributeNames[propName] ||
+          propName.toLowerCase();
+        expect(main.HTMLDOMPropertyConfig[attributeName]).toEqual(property);
+      }
+    );
+  });
 });
 
 describe('SVGDOMPropertyConfig', () => {
   it('matches snapshot', () => {
     expect(main.SVGDOMPropertyConfig).toMatchSnapshot();
+  });
+
+  jest.isolateModules(() => {
+    const DOMProperty = require('react-dom/lib/DOMProperty');
+    const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
+    DOMProperty.injection.injectDOMPropertyConfig(SVGDOMPropertyConfig);
+
+    it.each(Object.keys(DOMProperty.properties))(
+      'matches property `%s`',
+      propName => {
+        const property = DOMProperty.properties[propName];
+        delete property.attributeNamespace;
+        delete property.mutationMethod;
+        const attributeName =
+          SVGDOMPropertyConfig.DOMAttributeNames[propName] || propName;
+        expect(main.SVGDOMPropertyConfig[attributeName]).toEqual(property);
+      }
+    );
   });
 });
 
