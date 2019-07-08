@@ -5,17 +5,7 @@ const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
 const { LIB_DIR, SVG_DIR } = require('./constants');
 
 /**
- * Creates the DOM property map via injection.
- *
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L57
- */
-DOMProperty.injection.injectDOMPropertyConfig(SVGDOMPropertyConfig);
-
-// `autofocus` is removed since it's not an applicable attribute for SVG elements
-delete DOMProperty.getPossibleStandardName.autofocus;
-
-/**
- * Create output directories (if it does not exist).
+ * Create output directories (if it doesn't exist).
  */
 try {
   fs.mkdirSync(LIB_DIR);
@@ -30,37 +20,38 @@ try {
 }
 
 /**
- * SVG DOM property config.
+ * Contains a mapping of React props to HTML attributes.
  *
- * Contains a mapping of SVG attributes to React props.
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/SVGDOMPropertyConfig.js
  *
  * @type {Object}
  */
-const attributeToProperty = {};
+const properties = {
+  injection: DOMProperty.injection,
 
-/**
- * List of SVG DOM attributes.
- *
- * @type {Array}
- */
-const attributes = [];
+  /**
+   * To avoid duplication, some attributes are omitted as they exist on the HTML config.
+   *
+   * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/SVGDOMPropertyConfig.js#L17-L33
+   */
+  Properties: SVGDOMPropertyConfig.Properties,
 
-Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
-  const propertyName = DOMProperty.getPossibleStandardName[attributeName];
-
-  if (attributeName !== propertyName) {
-    attributeToProperty[attributeName] = propertyName;
-  }
-
-  attributes.push(attributeName);
-});
+  /**
+   * Remove property when key and value are the same.
+   */
+  DOMAttributeNames: Object.keys(SVGDOMPropertyConfig.DOMAttributeNames).reduce(
+    (accumulator, key) => {
+      const value = SVGDOMPropertyConfig.DOMAttributeNames[key];
+      if (key !== value) {
+        accumulator[key] = value;
+      }
+      return accumulator;
+    },
+    {}
+  )
+};
 
 fs.writeFileSync(
-  path.resolve(SVG_DIR, 'attributes.json'),
-  JSON.stringify(attributes)
-);
-
-fs.writeFileSync(
-  path.resolve(SVG_DIR, 'attribute-to-property.json'),
-  JSON.stringify(attributeToProperty)
+  path.resolve(SVG_DIR, 'properties.json'),
+  JSON.stringify(properties)
 );
