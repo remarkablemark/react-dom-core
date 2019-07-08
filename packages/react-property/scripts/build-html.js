@@ -2,21 +2,15 @@ const fs = require('fs');
 const path = require('path');
 const DOMProperty = require('react-dom/lib/DOMProperty');
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
-const { LIB_DIR, HTML_DIR } = require('./constants');
+const { LIB_DIR } = require('./constants');
 
 const { HAS_BOOLEAN_VALUE } = DOMProperty.injection;
 
 /**
- * Create output directories (if it doesn't exist).
+ * Create output directory (if it doesn't exist).
  */
 try {
   fs.mkdirSync(LIB_DIR);
-} catch (error) {
-  if (error.code !== 'EEXIST') throw error;
-}
-
-try {
-  fs.mkdirSync(HTML_DIR);
 } catch (error) {
   if (error.code !== 'EEXIST') throw error;
 }
@@ -44,6 +38,6 @@ const properties = {
 };
 
 fs.writeFileSync(
-  path.resolve(HTML_DIR, 'properties.json'),
+  path.resolve(LIB_DIR, 'HTMLDOMPropertyConfig.json'),
   JSON.stringify(properties)
 );

@@ -1,19 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
-const { LIB_DIR, SVG_DIR } = require('./constants');
+const { LIB_DIR } = require('./constants');
 
 /**
- * Create output directories (if it doesn't exist).
+ * Create output directory (if it doesn't exist).
  */
 try {
   fs.mkdirSync(LIB_DIR);
-} catch (error) {
-  if (error.code !== 'EEXIST') throw error;
-}
-
-try {
-  fs.mkdirSync(SVG_DIR);
 } catch (error) {
   if (error.code !== 'EEXIST') throw error;
 }
@@ -49,6 +43,6 @@ const properties = {
 };
 
 fs.writeFileSync(
-  path.resolve(SVG_DIR, 'properties.json'),
+  path.resolve(LIB_DIR, 'SVGDOMPropertyConfig.json'),
   JSON.stringify(properties)
 );

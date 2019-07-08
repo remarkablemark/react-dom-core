@@ -1,4 +1,4 @@
-var properties = require('./properties');
+var properties = require('../HTMLDOMPropertyConfig');
 var injection = require('../injection');
 
 var MUST_USE_PROPERTY = injection.MUST_USE_PROPERTY;
