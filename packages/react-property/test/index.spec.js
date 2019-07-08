@@ -1,18 +1,31 @@
-const {
-  HTMLDOMPropertyConfig,
-  SVGDOMPropertyConfig,
-  isCustomAttribute
-} = require('..');
+const DOMProperty = require('react-dom/lib/DOMProperty');
+const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
+const main = require('..');
 
 describe('HTMLDOMPropertyConfig', () => {
+  DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
+
+  it.each(Object.keys(DOMProperty.properties))(
+    'matches property `%s` from react-dom',
+    propName => {
+      const property = DOMProperty.properties[propName];
+      delete property.attributeNamespace;
+      delete property.mutationMethod;
+      const attributeName =
+        HTMLDOMPropertyConfig.DOMAttributeNames[propName] ||
+        propName.toLowerCase();
+      expect(main.HTMLDOMPropertyConfig[attributeName]).toEqual(property);
+    }
+  );
+
   it('matches snapshot', () => {
-    expect(HTMLDOMPropertyConfig).toMatchSnapshot();
+    expect(main.HTMLDOMPropertyConfig).toMatchSnapshot();
   });
 });
 
 describe('SVGDOMPropertyConfig', () => {
   it('matches snapshot', () => {
-    expect(SVGDOMPropertyConfig).toMatchSnapshot();
+    expect(main.SVGDOMPropertyConfig).toMatchSnapshot();
   });
 });
 
@@ -32,7 +45,7 @@ describe('isCustomAttribute', () => {
   `(
     'returns $expected when argument is "$argument"',
     ({ argument, expected }) => {
-      expect(isCustomAttribute(argument)).toBe(expected);
+      expect(main.isCustomAttribute(argument)).toBe(expected);
     }
   );
 });
