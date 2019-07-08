@@ -1,22 +1,51 @@
-var attributeToProperty = require('../../lib/html/attribute-to-property');
-var attributes = require('../../lib/html/attributes');
-var booleanProperties = require('../../lib/html/boolean-properties');
-var overloadedBooleanProperties = require('../../lib/html/overloaded-boolean-properties');
+var properties = require('./properties');
 
-var attributeMap = {};
+var injection = properties.injection;
+var MUST_USE_PROPERTY = injection.MUST_USE_PROPERTY;
+var HAS_BOOLEAN_VALUE = injection.HAS_BOOLEAN_VALUE;
+var HAS_NUMERIC_VALUE = injection.HAS_NUMERIC_VALUE;
+var HAS_POSITIVE_NUMERIC_VALUE = injection.HAS_POSITIVE_NUMERIC_VALUE;
+var HAS_OVERLOADED_BOOLEAN_VALUE = injection.HAS_OVERLOADED_BOOLEAN_VALUE;
+var Properties = properties.Properties;
+var DOMAttributeNames = properties.DOMAttributeNames;
+
+/**
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L14-L16
+ *
+ * @param {Number} value
+ * @param {Number} bitmask
+ * @return {Boolean}
+ */
+function checkMask(value, bitmask) {
+  return (value & bitmask) === bitmask;
+}
+
+/**
+ * Config map.
+ *
+ * @type {Object}
+ */
+var config = {};
 var attributeName;
 var propertyName;
+var propConfig;
 
-for (var i = 0, len = attributes.length; i < len; i++) {
-  attributeName = attributes[i];
-  propertyName = attributeToProperty[attributeName] || attributeName;
+for (propertyName in Properties) {
+  attributeName = DOMAttributeNames[propertyName] || propertyName.toLowerCase();
+  propConfig = Properties[propertyName];
 
-  attributeMap[attributeName] = {
+  config[attributeName] = {
+    attributeName: attributeName,
     propertyName: propertyName,
-    hasBooleanValue: booleanProperties.indexOf(propertyName) !== -1,
-    hasOverloadedBooleanValue:
-      overloadedBooleanProperties.indexOf(propertyName) !== -1
+    mustUseProperty: checkMask(propConfig, MUST_USE_PROPERTY),
+    hasBooleanValue: checkMask(propConfig, HAS_BOOLEAN_VALUE),
+    hasNumericValue: checkMask(propConfig, HAS_NUMERIC_VALUE),
+    hasPositiveNumericValue: checkMask(propConfig, HAS_POSITIVE_NUMERIC_VALUE),
+    hasOverloadedBooleanValue: checkMask(
+      propConfig,
+      HAS_OVERLOADED_BOOLEAN_VALUE
+    )
   };
 }
 
-module.exports = attributeMap;
+module.exports = config;

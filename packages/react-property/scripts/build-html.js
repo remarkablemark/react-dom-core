@@ -4,42 +4,16 @@ const DOMProperty = require('react-dom/lib/DOMProperty');
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
 const { LIB_DIR, HTML_DIR } = require('./constants');
 
-/**
- * Creates the DOM property map via injection.
- *
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L57
- *
- * ```js
- * {
- *   properties: {
- *     accept: {
- *       attributeName: 'accept',
- *       attributeNamespace: null,
- *       propertyName: 'accept',
- *       mutationMethod: null,
- *       mustUseProperty: false,
- *       hasBooleanValue: false,
- *       hasNumericValue: false,
- *       hasPositiveNumericValue: false,
- *       hasOverloadedBooleanValue: false
- *     },
- *     // ...
- *   },
- *   getPossibleStandardName: {
- *     autofocus: 'autoFocus',
- *     accept: 'accept',
- *     acceptcharset: 'acceptCharset',
- *     'accept-charset': 'acceptCharset',
- *     // ...
- *   },
- *   // ...
- * }
- * ```
- */
-DOMProperty.injection.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
+const {
+  MUST_USE_PROPERTY,
+  HAS_BOOLEAN_VALUE,
+  HAS_NUMERIC_VALUE,
+  HAS_POSITIVE_NUMERIC_VALUE,
+  HAS_OVERLOADED_BOOLEAN_VALUE
+} = DOMProperty.injection;
 
 /**
- * Create output directories (if it does not exist).
+ * Create output directories (if it doesn't exist).
  */
 try {
   fs.mkdirSync(LIB_DIR);
@@ -54,76 +28,34 @@ try {
 }
 
 /**
- * HTML DOM property config.
- *
- * Contains a mapping of HTML attributes to React props.
+ * Contains a mapping of React props to HTML attributes.
  *
  * @type {Object}
  */
-const attributeToProperty = {};
+const properties = {
+  injection: {
+    MUST_USE_PROPERTY,
+    HAS_BOOLEAN_VALUE,
+    HAS_NUMERIC_VALUE,
+    HAS_POSITIVE_NUMERIC_VALUE,
+    HAS_OVERLOADED_BOOLEAN_VALUE
+  },
 
-/**
- * List of HTML DOM attributes.
- *
- * @type {Array}
- */
-const attributes = [];
+  /**
+   * `autoFocus` is predefined and excluded from `HTMLDOMPropertyConfig.js`.
+   *
+   * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L42
+   * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L206
+   */
+  Properties: Object.assign(
+    { autoFocus: HAS_BOOLEAN_VALUE },
+    HTMLDOMPropertyConfig.Properties
+  ),
 
-/**
- * `autoFocus` is predefined and excluded from `HTMLDOMPropertyConfig.js`.
- *
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L42
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L206
- *
- * @type {Array}
- */
-const booleanProperties = ['autoFocus'];
-
-/**
- * HTML attributes that behave like booleans but can also accept a string value.
- *
- * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js#L190-L193
- *
- * @type {Array}
- */
-const overloadedBooleanProperties = [];
-
-Object.keys(DOMProperty.getPossibleStandardName).forEach(attributeName => {
-  const propertyName = DOMProperty.getPossibleStandardName[attributeName];
-
-  if (attributeName !== propertyName) {
-    attributeToProperty[attributeName] = propertyName;
-  }
-
-  const property = DOMProperty.properties[propertyName];
-
-  if (property) {
-    if (property.hasBooleanValue) {
-      booleanProperties.push(propertyName);
-    } else if (property.hasOverloadedBooleanValue) {
-      overloadedBooleanProperties.push(propertyName);
-    }
-  }
-
-  attributes.push(attributeName);
-});
+  DOMAttributeNames: HTMLDOMPropertyConfig.DOMAttributeNames
+};
 
 fs.writeFileSync(
-  path.resolve(HTML_DIR, 'attributes.json'),
-  JSON.stringify(attributes)
-);
-
-fs.writeFileSync(
-  path.resolve(HTML_DIR, 'attribute-to-property.json'),
-  JSON.stringify(attributeToProperty)
-);
-
-fs.writeFileSync(
-  path.resolve(HTML_DIR, 'boolean-properties.json'),
-  JSON.stringify(booleanProperties)
-);
-
-fs.writeFileSync(
-  path.resolve(HTML_DIR, 'overloaded-boolean-properties.json'),
-  JSON.stringify(overloadedBooleanProperties)
+  path.resolve(HTML_DIR, 'properties.json'),
+  JSON.stringify(properties)
 );
