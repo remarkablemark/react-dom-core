@@ -22,10 +22,6 @@ describe('HTMLDOMPropertyConfig', () => {
 });
 
 describe('SVGDOMPropertyConfig', () => {
-  it('matches snapshot', () => {
-    expect(main.SVGDOMPropertyConfig).toMatchSnapshot();
-  });
-
   jest.isolateModules(() => {
     const DOMProperty = require('react-dom/lib/DOMProperty');
     const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
