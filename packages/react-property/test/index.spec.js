@@ -1,5 +1,17 @@
 const main = require('..');
 
+describe.each(['html', 'svg'])('%s', key => {
+  it('is a subset of `properties`', () => {
+    expect(main.properties).toMatchObject(main[key]);
+  });
+});
+
+describe('properties', () => {
+  it('is a combination of `html` and `svg` configs', () => {
+    expect(main.properties).toEqual(Object.assign({}, main.html, main.svg));
+  });
+});
+
 describe('HTMLDOMPropertyConfig', () => {
   jest.isolateModules(() => {
     const DOMProperty = require('react-dom/lib/DOMProperty');
@@ -42,6 +54,10 @@ describe('SVGDOMPropertyConfig', () => {
 });
 
 describe('isCustomAttribute', () => {
+  it('is a function', () => {
+    expect(main.isCustomAttribute).toBeInstanceOf(Function);
+  });
+
   it.each`
     args                      | expected
     ${[]}                     | ${false}
