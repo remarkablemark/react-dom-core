@@ -58,7 +58,23 @@ function injectDOMPropertyConfig(domPropertyConfig, config, isSVG) {
 }
 
 /**
- * Properties map.
+ * HTML properties config.
+ *
+ * @type {Object}
+ */
+var html = {};
+injectDOMPropertyConfig(HTMLDOMPropertyConfig, html);
+
+/**
+ * SVG properties config.
+ *
+ * @type {Object}
+ */
+var svg = {};
+injectDOMPropertyConfig(SVGDOMPropertyConfig, svg, true);
+
+/**
+ * HTML and SVG properties config.
  *
  * @type {Object}
  */
@@ -72,6 +88,8 @@ var ATTRIBUTE_NAME_CHAR =
   ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040';
 
 module.exports = {
+  html: html,
+  svg: svg,
   properties: properties,
 
   /**
