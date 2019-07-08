@@ -1,6 +1,6 @@
 var properties = require('./properties');
+var injection = require('../injection');
 
-var injection = properties.injection;
 var MUST_USE_PROPERTY = injection.MUST_USE_PROPERTY;
 var HAS_BOOLEAN_VALUE = injection.HAS_BOOLEAN_VALUE;
 var HAS_NUMERIC_VALUE = injection.HAS_NUMERIC_VALUE;

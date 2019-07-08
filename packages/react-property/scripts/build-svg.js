@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const DOMProperty = require('react-dom/lib/DOMProperty');
 const SVGDOMPropertyConfig = require('react-dom/lib/SVGDOMPropertyConfig');
 const { LIB_DIR, SVG_DIR } = require('./constants');
 
@@ -27,8 +26,6 @@ try {
  * @type {Object}
  */
 const properties = {
-  injection: DOMProperty.injection,
-
   /**
    * To avoid duplication, some attributes are omitted as they exist on the HTML config.
    *

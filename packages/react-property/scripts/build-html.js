@@ -29,8 +29,6 @@ try {
  * @type {Object}
  */
 const properties = {
-  injection: DOMProperty.injection,
-
   Properties: Object.assign(
     /**
      * `autoFocus` is predefined and excluded from `HTMLDOMPropertyConfig.js`.
