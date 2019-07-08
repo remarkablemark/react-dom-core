@@ -43,21 +43,19 @@ describe('SVGDOMPropertyConfig', () => {
 
 describe('isCustomAttribute', () => {
   it.each`
-    argument                | expected
-    ${''}                   | ${false}
-    ${'dataaria'}           | ${false}
-    ${'aria'}               | ${false}
-    ${'aria-'}              | ${true}
-    ${'aria-live'}          | ${true}
-    ${'aria-live="polite"'} | ${false}
-    ${'data'}               | ${false}
-    ${'data-'}              | ${true}
-    ${'data-foo'}           | ${true}
-    ${'data-foo="bar"'}     | ${false}
-  `(
-    'returns $expected when argument is "$argument"',
-    ({ argument, expected }) => {
-      expect(main.isCustomAttribute(argument)).toBe(expected);
-    }
-  );
+    args                      | expected
+    ${[]}                     | ${false}
+    ${['']}                   | ${false}
+    ${['dataaria']}           | ${false}
+    ${['aria']}               | ${false}
+    ${['aria-']}              | ${true}
+    ${['aria-live']}          | ${true}
+    ${['aria-live="polite"']} | ${false}
+    ${['data']}               | ${false}
+    ${['data-']}              | ${true}
+    ${['data-foo']}           | ${true}
+    ${['data-foo="bar"']}     | ${false}
+  `('returns $expected with $args', ({ args, expected }) => {
+    expect(main.isCustomAttribute.apply(null, args)).toBe(expected);
+  });
 });
