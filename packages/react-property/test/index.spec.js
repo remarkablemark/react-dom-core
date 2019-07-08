@@ -17,10 +17,6 @@ describe('HTMLDOMPropertyConfig', () => {
       expect(main.HTMLDOMPropertyConfig[attributeName]).toEqual(property);
     }
   );
-
-  it('matches snapshot', () => {
-    expect(main.HTMLDOMPropertyConfig).toMatchSnapshot();
-  });
 });
 
 describe('SVGDOMPropertyConfig', () => {
