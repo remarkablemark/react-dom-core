@@ -22,40 +22,43 @@ Import main module:
 
 ```js
 // CommonJS
-const property = require('react-property');
+const reactProperty = require('react-property');
 
 // ES Modules
-import property from 'react-property';
+import reactProperty from 'react-property';
 ```
 
-Object output:
+Main module exports:
 
 ```js
 {
-  HTMLDOMPropertyConfig: {
+  html: {
     autofocus: {
-      propertyName: "autoFocus",
+      attributeName: 'autofocus',
+      propertyName: 'autoFocus',
+      mustUseProperty: false,
       hasBooleanValue: true,
+      hasNumericValue: false,
+      hasPositiveNumericValue: false,
       hasOverloadedBooleanValue: false
     },
     // ...
   },
-  SVGDOMPropertyConfig: {
-    accentheight: {
-      propertyName: 'accentHeight'
-    },
+  svg: {
+    // ...
+  },
+  properties: {
     // ...
   },
   isCustomAttribute: [Function: bound test]
 }
 ```
 
-Instead of importing all of the property configs, you can also just import what you need:
+You may also import what you need:
 
 ```js
-const HTMLDOMPropertyConfig = require('react-property/lib/html');
-const SVGAttributeToProperty = require('react-property/lib/svg/attribute-to-property');
-const isCustomAttribute = require('react-property/lib/is-custom-attribute');
+const HTMLDOMPropertyConfig = require('react-property/lib/HTMLDOMPropertyConfig');
+const injection = require('react-property/lib/injection');
 ```
 
 ## Layout
@@ -64,17 +67,9 @@ const isCustomAttribute = require('react-property/lib/is-custom-attribute');
 .
 ├── index.js
 └── lib
-    ├── html
-    │   ├── attribute-to-property.json
-    │   ├── attributes.json
-    │   ├── boolean-properties.json
-    │   ├── index.js
-    │   └── overloaded-boolean-properties.json
-    ├── is-custom-attribute.js
-    └── svg
-        ├── attribute-to-property.json
-        ├── attributes.json
-        └── index.js
+    ├── HTMLDOMPropertyConfig.json
+    ├── SVGDOMPropertyConfig.json
+    └── injection.json
 ```
 
 ## License
