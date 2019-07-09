@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const prettier = require('prettier');
 const DOMProperty = require('react-dom/lib/DOMProperty');
 const HTMLDOMPropertyConfig = require('react-dom/lib/HTMLDOMPropertyConfig');
-const { LIB_DIR } = require('./constants');
+const { LIB_DIR, PRETTIER_OPTIONS } = require('./constants');
 
 const { HAS_BOOLEAN_VALUE } = DOMProperty.injection;
 
@@ -38,6 +39,9 @@ const properties = {
 };
 
 fs.writeFileSync(
-  path.resolve(LIB_DIR, 'HTMLDOMPropertyConfig.json'),
-  JSON.stringify(properties)
+  path.resolve(LIB_DIR, 'HTMLDOMPropertyConfig.js'),
+  prettier.format(
+    'module.exports=' + JSON.stringify(properties),
+    PRETTIER_OPTIONS
+  )
 );
