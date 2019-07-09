@@ -67,9 +67,9 @@ const injection = require('react-property/lib/injection');
 .
 ├── index.js
 └── lib
-    ├── HTMLDOMPropertyConfig.json
-    ├── SVGDOMPropertyConfig.json
-    └── injection.json
+    ├── HTMLDOMPropertyConfig.js
+    ├── SVGDOMPropertyConfig.js
+    └── injection.js
 ```
 
 ## License
