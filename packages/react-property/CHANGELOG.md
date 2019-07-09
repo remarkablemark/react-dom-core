@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/remarkablemark/react-dom-core/compare/react-property@0.1.0...react-property@1.0.0) (2019-07-09)
+
+
+### Features
+
+* **react-property:** add script to build injection json ([2de3da9](https://github.com/remarkablemark/react-dom-core/commit/2de3da9))
+* **react-property:** consolidate injection logic to `index.js` ([167887f](https://github.com/remarkablemark/react-dom-core/commit/167887f))
+* **react-property:** export html and svg property configs ([8f8b921](https://github.com/remarkablemark/react-dom-core/commit/8f8b921))
+* **react-property:** rewrite build html script ([a44567a](https://github.com/remarkablemark/react-dom-core/commit/a44567a))
+* **react-property:** rewrite build svg script ([eb7a59b](https://github.com/remarkablemark/react-dom-core/commit/eb7a59b))
+
+
+### BREAKING CHANGES
+
+* **react-property:** remove exports `HTMLDOMPropertyConfig` and
+`SVGDOMPropertyConfig` and consolidate the properties in
+`properties`.
+
+As a result of this change, `src/` directory is removed since all
+the injection logic is handled in `index.js` and the npm script
+`copy` is removed as well.
+
+
+
+
+
 # 0.1.0 (2019-07-05)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "react-property",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "HTML and SVG DOM property configs used by React.",
   "main": "index.js",
   "scripts": {
