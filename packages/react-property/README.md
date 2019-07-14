@@ -4,7 +4,9 @@
 
 [![NPM version](https://img.shields.io/npm/v/react-property.svg)](https://www.npmjs.com/package/react-property)
 
-HTML and SVG DOM property configs used by React.
+[HTML](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js) and [SVG](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/SVGDOMPropertyConfig.js) [DOM](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js) property configs used by [React](https://github.com/facebook/react).
+
+[Repl.it](https://repl.it/@remarkablemark/react-property)
 
 ## Install
 
