@@ -9,11 +9,7 @@ Copy of [react-dom@15](https://unpkg.com/react-dom@15/).
 ## Install
 
 ```sh
-# with npm
-$ npm install react-dom-core --save
-
-# with yarn
-$ yarn add react-dom-core
+npm install react-dom-core
 ```
 
 ## Usage
