@@ -18,15 +18,14 @@ A monorepo containing the following packages:
 Clone repository:
 
 ```sh
-$ git clone https://github.com/remarkablemark/react-dom-core.git
-$ cd react-dom-core
+git clone https://github.com/remarkablemark/react-dom-core.git && cd react-dom-core
 ```
 
 Install dependencies and bootstrap packages:
 
 ```sh
-$ npm install
-$ npm run bootstrap
+npm install
+npm run bootstrap
 ```
 
 ## Scripts
@@ -34,43 +33,43 @@ $ npm run bootstrap
 Link local packages and install remaining package dependencies:
 
 ```sh
-$ npm run bootstrap
+npm run bootstrap
 ```
 
 Build packages:
 
 ```sh
-$ npm run build
+npm run build
 ```
 
 List packages that have changed since last release:
 
 ```sh
-$ npm run changed
+npm run changed
 ```
 
 Remove `node_modules` from all packages:
 
 ```sh
-$ npm run clean
+npm run clean
 ```
 
 Lint packages:
 
 ```sh
-$ npm run lint
+npm run lint
 ```
 
 Run tests for packages:
 
 ```sh
-$ npm test
+npm test
 ```
 
 Release and publish packages:
 
 ```sh
-$ npm run release
+npm run release
 ```
 
 ## License
