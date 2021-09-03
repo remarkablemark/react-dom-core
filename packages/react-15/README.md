@@ -9,11 +9,7 @@ Copy of [react@15](https://unpkg.com/react@15/).
 ## Install
 
 ```sh
-# with npm
-$ npm install react-15 --save
-
-# with yarn
-$ yarn add react-15
+npm install react-15
 ```
 
 ## Usage
