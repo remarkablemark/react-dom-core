@@ -11,11 +11,7 @@
 ## Install
 
 ```sh
-# with npm
-$ npm install react-property --save
-
-# with yarn
-$ yarn add react-property
+npm install react-property
 ```
 
 ## Usage
