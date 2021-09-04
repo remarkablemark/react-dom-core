@@ -1,6 +1,6 @@
 # react-dom-core
 
-[![Build Status](https://travis-ci.org/remarkablemark/react-dom-core.svg?branch=master)](https://travis-ci.org/remarkablemark/react-dom-core.svg)
+[![build](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml)
 
 A monorepo containing the following packages:
 
