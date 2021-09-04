@@ -10,8 +10,8 @@ A monorepo containing the following packages:
 
 ## Prerequisites
 
-- [Node.js 8+](https://nodejs.org/en/download/)
-- [npm 5.3+](https://www.npmjs.com/get-npm)
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
 ## Install
 
@@ -48,19 +48,19 @@ List packages that have changed since last release:
 npm run changed
 ```
 
-Remove `node_modules` from all packages:
+Delete `node_modules` from all packages:
 
 ```sh
 npm run clean
 ```
 
-Lint packages:
+Run lint for all packages:
 
 ```sh
 npm run lint
 ```
 
-Run tests for packages:
+Run test for all packages:
 
 ```sh
 npm test
