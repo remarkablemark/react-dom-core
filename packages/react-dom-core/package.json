@@ -5,8 +5,7 @@
   "scripts": {
     "clean": "rm -rf dist lib index.js server.js test-utils.js",
     "copy": "cp -r node_modules/react-dom/{dist,lib,index.js,server.js,test-utils.js} .",
-    "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable && npm run clean && npm run copy && npm run replace",
+    "prepublishOnly": "npm run clean && npm run copy && npm run replace",
     "replace": "grep -rl \"require('react\" lib | xargs sed -i '' \"s/require('react/require('react-15/g\""
   },
   "repository": {
