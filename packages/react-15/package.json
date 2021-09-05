@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run copy",
     "clean": "rm -rf dist lib react.js",
-    "copy": "cp -r node_modules/react/{dist,lib,react.js} .",
+    "copy": "cd node_modules/react && cp -r dist lib react.js ../..",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "repository": {
