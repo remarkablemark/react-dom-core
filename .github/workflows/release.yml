@@ -39,6 +39,15 @@ jobs:
       - name: Bootstrap packages
         run: npm run bootstrap
 
+      - name: Run lint
+        run: npm run lint
+
+      - name: Run build
+        run: npm run build
+
+      - name: Run test
+        run: npm test
+
       - name: Run release
         run: npm run release
         env:
