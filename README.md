@@ -18,7 +18,7 @@ A monorepo containing the following packages:
 Clone repository:
 
 ```sh
-git clone https://github.com/remarkablemark/react-dom-core.git && cd react-dom-core
+git clone --recursive https://github.com/remarkablemark/react-dom-core.git && cd react-dom-core
 ```
 
 Install dependencies and bootstrap packages:
