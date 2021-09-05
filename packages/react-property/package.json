@@ -9,8 +9,8 @@
     "build:injection": "node scripts/build-injection",
     "build:svg": "node scripts/build-svg",
     "clean": "rm -rf lib",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run build",
     "test": "jest --coverage --ci",
     "test:watch": "jest --watch"

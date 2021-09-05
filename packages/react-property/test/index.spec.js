@@ -1,6 +1,6 @@
 const main = require('..');
 
-describe.each(['html', 'svg'])('%s', key => {
+describe.each(['html', 'svg'])('%s', (key) => {
   it('is a subset of `properties`', () => {
     expect(main.properties).toMatchObject(main[key]);
   });
@@ -20,7 +20,7 @@ describe('HTMLDOMPropertyConfig', () => {
 
     it.each(Object.keys(DOMProperty.properties))(
       'matches property `%s`',
-      propName => {
+      (propName) => {
         const property = DOMProperty.properties[propName];
         delete property.attributeNamespace;
         delete property.mutationMethod;
@@ -41,7 +41,7 @@ describe('SVGDOMPropertyConfig', () => {
 
     it.each(Object.keys(DOMProperty.properties))(
       'matches property `%s`',
-      propName => {
+      (propName) => {
         const property = DOMProperty.properties[propName];
         delete property.attributeNamespace;
         delete property.mutationMethod;
