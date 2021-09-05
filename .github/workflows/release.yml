@@ -1,11 +1,16 @@
 name: release
 on:
-  push:
-    branches: master
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: 'Dry run? (y/N)'
+        required: true
+        default: 'N'
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -46,16 +51,21 @@ jobs:
       - name: Lint commit message
         run: npx commitlint --from=HEAD~1
 
-      - name: Run lint
+      - name: Lint
         run: npm run lint
 
-      - name: Run build
+      - name: Build
         run: npm run build
 
-      - name: Run test
+      - name: Test
         run: npm test
 
-      - name: Run release
+      - name: Release (dry run)
+        if: contains(github.event.inputs.dry, 'y')
+        run: npx lerna version --no-git-tag-version --no-push --verbose --yes
+
+      - name: Release
+        if: contains(github.event.inputs.dry, 'N')
         run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
