@@ -1,5 +1,9 @@
 {
   "command": {
+    "bootstrap": {
+      "hoist": true,
+      "nohoist": "react*"
+    },
     "publish": {
       "conventionalCommits": true,
       "createRelease": "github",
@@ -17,8 +21,6 @@
       "allowBranch": "master"
     }
   },
-  "hoist": true,
-  "nohoist": "react*",
   "packages": ["packages/*"],
   "version": "independent"
 }
