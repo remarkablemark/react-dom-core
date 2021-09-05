@@ -2,7 +2,7 @@
   "name": "root",
   "private": "true",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "build": "lerna run build",
     "changed": "lerna changed",
     "clean": "lerna clean",
@@ -15,7 +15,8 @@
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
     "husky": "7.0.2",
-    "lerna": "4.0.0"
+    "lerna": "4.0.0",
+    "pinst": "2.1.6"
   },
   "license": "MIT"
 }
