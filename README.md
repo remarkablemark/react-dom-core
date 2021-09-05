@@ -42,49 +42,37 @@ Bootstrap packages:
 npm run bootstrap
 ```
 
-## Scripts
+## Available Scripts
 
-Link local packages and install remaining package dependencies:
+In the project directory, you can run:
 
-```sh
-npm run bootstrap
-```
+### `npm run bootstrap`
 
-Build packages:
+Link local packages and install remaining package dependencies.
 
-```sh
-npm run build
-```
+### `npm run build`
 
-List packages that have changed since last release:
+Build packages.
 
-```sh
-npm run changed
-```
+### `npm run changed`
 
-Delete `node_modules` from all packages:
+List packages that have changed since last release.
 
-```sh
-npm run clean
-```
+### `npm run clean`
 
-Run lint for all packages:
+Delete `node_modules` from all packages.
 
-```sh
-npm run lint
-```
+### `npm run lint`
 
-Run test for all packages:
+Run lint for all packages.
 
-```sh
-npm test
-```
+### `npm test`
 
-Release and publish packages:
+Run test for all packages.
 
-```sh
-npm run release
-```
+### `npm run release`
+
+Release and publish packages.
 
 ## License
 
