@@ -9,8 +9,8 @@
     "build:injection": "node scripts/build-injection",
     "build:svg": "node scripts/build-svg",
     "clean": "rm -rf lib",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run build",
     "test": "jest --coverage --ci",
     "test:watch": "jest --watch"
@@ -37,10 +37,10 @@
     "/lib"
   ],
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-plugin-prettier": "^3.1.0",
-    "jest": "^24.8.0",
-    "prettier": "^1.17.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.1.0",
+    "prettier": "^2.3.2",
     "react-dom": "^15"
   },
   "license": "MIT"
