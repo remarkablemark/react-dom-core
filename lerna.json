@@ -3,8 +3,9 @@
   "command": {
     "publish": {
       "conventionalCommits": true,
+      "createRelease": "github",
       "exact": true,
-      "ignoreChanges": ["**/*.md"],
+      "ignoreChanges": ["**/*.md", "**/*.spec.*", "**/*.test.*"],
       "message": "chore(release): publish",
       "yes": true
     },
