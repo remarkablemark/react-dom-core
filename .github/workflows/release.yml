@@ -29,7 +29,7 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/package.json', './package.json') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json', './package-lock.json') }}
         id: cache
 
       - name: Install dependencies
@@ -38,6 +38,9 @@ jobs:
 
       - name: Bootstrap packages
         run: npm run bootstrap
+
+      - name: Lint commit message
+        run: npx commitlint --from=HEAD~1
 
       - name: Run lint
         run: npm run lint
