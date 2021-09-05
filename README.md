@@ -10,8 +10,11 @@ A monorepo containing the following packages:
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
+[nvm](https://github.com/nvm-sh/nvm):
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+```
 
 ## Install
 
@@ -21,10 +24,21 @@ Clone repository:
 git clone --recursive https://github.com/remarkablemark/react-dom-core.git && cd react-dom-core
 ```
 
-Install dependencies and bootstrap packages:
+Use Node.js version:
+
+```sh
+nvm use
+```
+
+Install dependencies:
 
 ```sh
 npm install
+```
+
+Bootstrap packages:
+
+```sh
 npm run bootstrap
 ```
 
