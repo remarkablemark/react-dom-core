@@ -63,7 +63,7 @@ jobs:
 
       - name: Release (dry run)
         if: contains(github.event.inputs.dry, 'y')
-        run: npx lerna version --no-git-tag-version --no-push --verbose --yes
+        run: npx lerna version --no-git-tag-version --no-push --yes --loglevel=verbose
 
       - name: Release
         if: contains(github.event.inputs.dry, 'N')
