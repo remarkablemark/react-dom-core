@@ -1,6 +1,7 @@
 # react-dom-core
 
 [![build](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/react-dom-core/branch/master/graph/badge.svg?token=7SBKW68CLE)](https://codecov.io/gh/remarkablemark/react-dom-core)
 
 A monorepo containing the following packages:
 
