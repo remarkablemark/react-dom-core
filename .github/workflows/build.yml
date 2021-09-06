@@ -47,3 +47,6 @@ jobs:
 
       - name: Run test
         run: npm test
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2
