@@ -2,12 +2,9 @@
   "name": "react-property",
   "version": "1.0.2",
   "description": "HTML and SVG DOM property configs used by React.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "npm run build:html && npm run build:injection && npm run build:svg",
-    "build:html": "node scripts/build-html",
-    "build:injection": "node scripts/build-injection",
-    "build:svg": "node scripts/build-svg",
+    "build": "rollup -c rollup.config.possibleStandardNames.js && scripts/build.js && rollup -c",
     "clean": "rm -rf lib",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
@@ -45,7 +42,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
-    "react-dom": "^15"
     "rollup": "^2.56.3"
   },
   "license": "MIT"
