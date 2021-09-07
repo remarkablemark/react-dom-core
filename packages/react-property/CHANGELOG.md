@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/remarkablemark/react-dom-core/compare/react-property@1.0.2...react-property@2.0.0) (2021-09-07)
+
+
+### Features
+
+* **react-property:** change implementation to use latest React ([f7361e7](https://github.com/remarkablemark/react-dom-core/commit/f7361e7215c28be5b2a91b09a13be1456e924c17)), closes [#14](https://github.com/remarkablemark/react-dom-core/issues/14)
+
+
+### BREAKING CHANGES
+
+* **react-property:** update property from react-dom 15 to react-dom 17
+
+
+
+
+
 ## [1.0.2](https://github.com/remarkablemark/react-dom-core/compare/react-property@1.0.1...react-property@1.0.2) (2021-09-05)
 
 **Note:** Version bump only for package react-property
