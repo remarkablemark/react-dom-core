@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPropertyInfo gets for overloaded boolean 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": true,
+  "attributeName": "capture",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "capture",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 4,
+}
+`;
+
+exports[`getPropertyInfo gets info for DOM property 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": true,
+  "attributeName": "checked",
+  "attributeNamespace": null,
+  "mustUseProperty": true,
+  "propertyName": "checked",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 3,
+}
+`;
+
+exports[`getPropertyInfo gets info for HTML attribute that must be a number 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "rowspan",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "rowSpan",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 5,
+}
+`;
+
+exports[`getPropertyInfo gets info for HTML attribute that must be a positive number 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "cols",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "cols",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 6,
+}
+`;
+
+exports[`getPropertyInfo gets info for HTML boolean attribute 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": true,
+  "attributeName": "allowfullscreen",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "allowFullScreen",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 3,
+}
+`;
+
+exports[`getPropertyInfo gets info for SVG attribute that need special casing 1`] = `null`;
+
+exports[`getPropertyInfo gets info for SVG attribute with the xlink namespace 1`] = `null`;
+
+exports[`getPropertyInfo gets info for SVG attribute with the xml namespace 1`] = `null`;
+
+exports[`getPropertyInfo gets info for attribute that exists both in HTML and SVG 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "tabindex",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "tabIndex",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 1,
+}
+`;
+
+exports[`getPropertyInfo gets info for attributes that accept URLs 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "xlink:href",
+  "attributeNamespace": "http://www.w3.org/1999/xlink",
+  "mustUseProperty": false,
+  "propertyName": "xlinkHref",
+  "removeEmptyString": false,
+  "sanitizeURL": true,
+  "type": 1,
+}
+`;
+
+exports[`getPropertyInfo gets info for attributes that accept URLs 2`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "src",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "src",
+  "removeEmptyString": true,
+  "sanitizeURL": true,
+  "type": 1,
+}
+`;
+
+exports[`getPropertyInfo gets info for different name attribute 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "accept-charset",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "acceptCharset",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 1,
+}
+`;
+
+exports[`getPropertyInfo gets info for enumerated HTML attribute 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": true,
+  "attributeName": "contenteditable",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "contentEditable",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 2,
+}
+`;
+
+exports[`getPropertyInfo gets info for enumerated SVG attribute 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": true,
+  "attributeName": "autoReverse",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "autoReverse",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 2,
+}
+`;
+
+exports[`getPropertyInfo gets info for reserved prop 1`] = `
+PropertyInfoRecord {
+  "acceptsBooleans": false,
+  "attributeName": "children",
+  "attributeNamespace": null,
+  "mustUseProperty": false,
+  "propertyName": "children",
+  "removeEmptyString": false,
+  "sanitizeURL": false,
+  "type": 0,
+}
+`;
