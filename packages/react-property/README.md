@@ -4,9 +4,9 @@
 
 [![NPM version](https://img.shields.io/npm/v/react-property.svg)](https://www.npmjs.com/package/react-property)
 
-[HTML](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js) and [SVG](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/SVGDOMPropertyConfig.js) [DOM](https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/DOMProperty.js) property configs used by [React](https://github.com/facebook/react).
+HTML and SVG DOM properties used by [React](https://github.com/facebook/react). See [DOMProperty](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/DOMProperty.js) and [possibleStandardNames](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/possibleStandardNames.js).
 
-[Repl.it](https://repl.it/@remarkablemark/react-property)
+Try [Replit](https://repl.it/@remarkablemark/react-property) demo.
 
 ## Install
 
@@ -16,7 +16,7 @@ npm install react-property
 
 ## Usage
 
-Import main module:
+Import module:
 
 ```js
 // CommonJS
@@ -26,50 +26,28 @@ const reactProperty = require('react-property');
 import reactProperty from 'react-property';
 ```
 
-Main module exports:
+Module contains:
 
 ```js
 {
-  html: {
-    autofocus: {
-      attributeName: 'autofocus',
-      propertyName: 'autoFocus',
-      mustUseProperty: false,
-      hasBooleanValue: true,
-      hasNumericValue: false,
-      hasPositiveNumericValue: false,
-      hasOverloadedBooleanValue: false
-    },
+  BOOLEAN: 3,
+  BOOLEANISH_STRING: 2,
+  NUMERIC: 5,
+  OVERLOADED_BOOLEAN: 4,
+  POSITIVE_NUMERIC: 6,
+  RESERVED: 0,
+  STRING: 1,
+  getPropertyInfo: [Function: getPropertyInfo],
+  isCustomAttribute: [Function: bound test],
+  possibleStandardNames: {
+    accept: 'accept',
+    acceptcharset: 'acceptCharset',
+    'accept-charset': 'acceptCharset',
     // ...
-  },
-  svg: {
-    // ...
-  },
-  properties: {
-    // ...
-  },
-  isCustomAttribute: [Function: bound test]
+  }
 }
-```
-
-You may also import what you need:
-
-```js
-const HTMLDOMPropertyConfig = require('react-property/lib/HTMLDOMPropertyConfig');
-const injection = require('react-property/lib/injection');
-```
-
-## Layout
-
-```
-.
-├── index.js
-└── lib
-    ├── HTMLDOMPropertyConfig.js
-    ├── SVGDOMPropertyConfig.js
-    └── injection.js
 ```
 
 ## License
 
-MIT. See [license](https://github.com/facebook/react/blob/15-stable/LICENSE) from original project.
+MIT. See [license](https://github.com/facebook/react/blob/main/LICENSE) from original project.
