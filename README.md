@@ -11,18 +11,15 @@ A monorepo containing the following packages:
 
 ## Prerequisites
 
-[nvm](https://github.com/nvm-sh/nvm):
-
-```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-```
+- [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 ## Install
 
 Clone repository:
 
 ```sh
-git clone --recursive https://github.com/remarkablemark/react-dom-core.git && cd react-dom-core
+git clone --recursive https://github.com/remarkablemark/react-dom-core.git
+cd react-dom-core
 ```
 
 Use Node.js version:
