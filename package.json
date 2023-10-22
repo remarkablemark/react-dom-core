@@ -16,7 +16,7 @@
     "@commitlint/config-conventional": "^13.1.0",
     "husky": "^7.0.2",
     "lerna": "^6.1.0",
-    "prettier": "^2.3.2"
+    "prettier": "^3.0.3"
   },
   "license": "MIT"
 }
