@@ -48,33 +48,29 @@ npm install
 
 In the project directory, you can run:
 
-### `npm run bootstrap`
-
-Link local packages and install remaining package dependencies.
-
 ### `npm run build`
 
-Build packages.
+Builds packages.
 
 ### `npm run changed`
 
-List packages that have changed since last release.
+Lists packages that have changed since last release.
 
 ### `npm run clean`
 
-Delete `node_modules` from all packages.
+Deletes `node_modules` from packages and cleans build artifacts.
 
 ### `npm run lint`
 
-Run lint for all packages.
+Lints packages.
 
 ### `npm test`
 
-Run test for all packages.
+Tests packages.
 
 ### `npm run release`
 
-Release and publish packages.
+Releases and publishes packages.
 
 ## License
 
