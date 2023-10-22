@@ -1,16 +1,18 @@
 {
   "env": {
-    "es6": true,
     "jest": true,
     "node": true
   },
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended", "plugin:ft-flow/recommended"],
+  "parser": "hermes-eslint",
   "parserOptions": {
-    "ecmaVersion": 11,
+    "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "plugins": ["ft-flow", "prettier"],
   "rules": {
+    "no-console": "error",
+    "no-debugger": "error",
     "prettier/prettier": "error"
   }
 }

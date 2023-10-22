@@ -1,4 +1,4 @@
-import { babel } from '@rollup/plugin-babel';
+import sucrase from '@rollup/plugin-sucrase';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,14 +10,16 @@ export default {
     __dirname,
     '../../react/packages/react-dom/src/shared/possibleStandardNames'
   ),
+
   output: {
     exports: 'auto',
     file: 'lib/possibleStandardNames.js',
     format: 'cjs'
   },
+
   plugins: [
-    babel({
-      babelHelpers: 'bundled'
+    sucrase({
+      transforms: ['flow']
     })
   ]
 };
