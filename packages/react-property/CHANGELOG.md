@@ -5,7 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.2](https://github.com/remarkablemark/react-dom-core/compare/react-property@2.0.1...react-property@2.0.2) (2023-10-22)
 
-**Note:** Version bump only for package react-property
+### Build System
+
+- **react-property:** add TypeScript declaration files
 
 ## [2.0.1](https://github.com/remarkablemark/react-dom-core/compare/react-property@2.0.0...react-property@2.0.1) (2023-10-22)
 
