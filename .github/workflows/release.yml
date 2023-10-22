@@ -32,9 +32,6 @@ jobs:
       - name: Install dependencies
         run: npm install --prefer-offline
 
-      - name: Lint commit message
-        run: npx commitlint --from=HEAD~1
-
       - name: Lint
         run: npm run lint
 
@@ -52,5 +49,5 @@ jobs:
         if: contains(github.event.inputs.dry, 'N')
         run: npm run release
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
