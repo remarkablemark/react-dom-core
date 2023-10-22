@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { writeFileSync } = require('fs');
+const { writeFile } = require('fs').promises;
 const { resolve } = require('path');
 const prettier = require('prettier');
 
@@ -55,10 +55,12 @@ exports.possibleStandardNames = ${JSON.stringify(
   possibleStandardNamesOptimized
 )}`;
 
-writeFileSync(
-  resolve(__dirname, '../lib/possibleStandardNamesOptimized.js'),
-  prettier.format(output, {
-    ...prettierrc,
-    parser: 'babel'
-  })
-);
+(async () => {
+  await writeFile(
+    resolve(__dirname, '../lib/possibleStandardNamesOptimized.js'),
+    await prettier.format(output, {
+      ...prettierrc,
+      parser: 'babel'
+    })
+  );
+})();

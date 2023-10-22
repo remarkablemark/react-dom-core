@@ -1,6 +1,10 @@
 import alias from '@rollup/plugin-alias';
 import { babel } from '@rollup/plugin-babel';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
+
+// https://stackoverflow.com/a/50052194
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default {
   input: 'src/index.js',

@@ -4,7 +4,7 @@
   "description": "HTML and SVG DOM property configs used by React.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rollup -c rollup.config.possibleStandardNames.js && scripts/build.js && rollup -c",
+    "build": "rollup -c rollup.config.possibleStandardNames.mjs && scripts/build.js && rollup -c",
     "clean": "rm -rf lib",
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "npm run lint -- --fix",
