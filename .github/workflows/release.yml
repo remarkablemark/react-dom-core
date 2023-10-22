@@ -5,7 +5,7 @@ on:
       dry:
         description: 'Dry run? (y/N)'
         required: true
-        default: 'N'
+        default: 'y'
 
 jobs:
   release:
