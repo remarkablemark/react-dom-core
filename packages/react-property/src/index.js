@@ -14,18 +14,18 @@ const ATTRIBUTE_NAME_CHAR =
 /**
  * Checks whether a property name is a custom attribute.
  *
- * @see {@link https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L23-L25}
+ * @see https://github.com/facebook/react/blob/15-stable/src/renderers/dom/shared/HTMLDOMPropertyConfig.js#L23-L25
  *
- * @param {string}
- * @return {boolean}
+ * @type {(attribute: string) => boolean}
  */
-export const isCustomAttribute = RegExp.prototype.test.bind(
-  // eslint-disable-next-line no-misleading-character-class
-  new RegExp('^(data|aria)-[' + ATTRIBUTE_NAME_CHAR + ']*$')
-);
+export const isCustomAttribute: (attribute: string) => boolean =
+  RegExp.prototype.test.bind(
+    // eslint-disable-next-line no-misleading-character-class
+    new RegExp('^(data|aria)-[' + ATTRIBUTE_NAME_CHAR + ']*$')
+  );
 
 /**
- * @see {@link https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/DOMProperty.js}
+ * @see https://github.com/facebook/react/blob/v18.2.0/packages/react-dom/src/shared/DOMProperty.js
  */
 export {
   RESERVED,
@@ -35,10 +35,16 @@ export {
   OVERLOADED_BOOLEAN,
   NUMERIC,
   POSITIVE_NUMERIC,
+  /**
+   * @type {(name: string) => PropertyInfo | null}
+   */
   getPropertyInfo
 } from 'react-dom/src/shared/DOMProperty';
 
-export const possibleStandardNames = Object.keys(
+/**
+ * @type {Record<string, string>}
+ */
+export const possibleStandardNames: Record<string, string> = Object.keys(
   possibleStandardNamesOptimized
 ).reduce((accumulator, standardName) => {
   const propName = possibleStandardNamesOptimized[standardName];
