@@ -11,11 +11,11 @@
     "test": "lerna run test"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "husky": "^7.0.2",
-    "lerna": "^7.4.1",
-    "prettier": "^3.0.3"
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "husky": "7.0.2",
+    "lerna": "7.4.1",
+    "prettier": "3.0.3"
   },
   "workspaces": [
     "./packages/*"
