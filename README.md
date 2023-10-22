@@ -44,12 +44,6 @@ Install dependencies:
 npm install
 ```
 
-Bootstrap packages:
-
-```sh
-npm run bootstrap
-```
-
 ## Available Scripts
 
 In the project directory, you can run:

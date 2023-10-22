@@ -3,10 +3,9 @@
   "version": "0.2.0",
   "description": "Copy of react 15",
   "scripts": {
-    "build": "npm run copy",
+    "build": "scripts/copy.sh",
     "clean": "rm -rf dist lib react.js",
-    "copy": "cd node_modules/react && cp -r dist lib react.js ../..",
-    "prepublishOnly": "npm run clean && npm run build"
+    "prepublishOnly": "npm run clean && npm run build && rm -rf scripts"
   },
   "repository": {
     "type": "git",
