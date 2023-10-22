@@ -5,7 +5,7 @@
   "scripts": {
     "build": "scripts/copy.sh",
     "clean": "rm -rf dist lib react.js",
-    "prepublishOnly": "npm run clean && npm run build && rm -rf scripts"
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
