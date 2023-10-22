@@ -1,6 +1,6 @@
 {
   "name": "react-dom-core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Copy of react-dom 15",
   "scripts": {
     "build": "scripts/copy.sh && scripts/replace.sh",
@@ -30,7 +30,7 @@
   "dependencies": {
     "fbjs": "3.0.5",
     "object-assign": "4.1.1",
-    "react-15": "0.2.0"
+    "react-15": "0.2.1"
   },
   "devDependencies": {
     "react-dom": "15"

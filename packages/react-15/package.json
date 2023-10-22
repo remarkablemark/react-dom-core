@@ -1,6 +1,6 @@
 {
   "name": "react-15",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Copy of react 15",
   "scripts": {
     "build": "scripts/copy.sh",
