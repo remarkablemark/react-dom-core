@@ -7,8 +7,16 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['all', 'deps', 'github', 'release', 'root', ...readdirSync('./packages')],
+      [
+        'all',
+        'deps',
+        'deps-dev',
+        'github',
+        'release',
+        'root',
+        ...readdirSync('./packages')
+      ]
     ],
-    'scope-empty': [2, 'never'],
-  },
+    'scope-empty': [2, 'never']
+  }
 };
