@@ -6,7 +6,7 @@
 
 HTML and SVG DOM properties used by [React](https://github.com/facebook/react). See [DOMProperty](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/DOMProperty.js) and [possibleStandardNames](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/possibleStandardNames.js).
 
-Try [Replit](https://repl.it/@remarkablemark/react-property) demo.
+Try [Replit](https://replit.com/@remarkablemark/react-property) demo.
 
 ## Install
 
@@ -16,14 +16,16 @@ npm install react-property
 
 ## Usage
 
-Import module:
+Import ES Module:
 
 ```js
-// CommonJS
-const reactProperty = require('react-property');
-
-// ES Modules
 import reactProperty from 'react-property';
+```
+
+Require with CommonJS:
+
+```js
+const reactProperty = require('react-property');
 ```
 
 Module contains:

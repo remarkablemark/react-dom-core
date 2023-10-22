@@ -26,6 +26,12 @@ git clone --recursive https://github.com/remarkablemark/react-dom-core.git
 cd react-dom-core
 ```
 
+Pull Git submodule:
+
+```sh
+git submodule update --init --recursive
+```
+
 Use Node.js version:
 
 ```sh
