@@ -2,10 +2,9 @@
   "name": "root",
   "private": "true",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "changed": "lerna changed",
-    "clean": "lerna clean",
+    "clean": "lerna clean --yes && lerna run clean",
     "lint": "lerna run lint",
     "postinstall": "husky install",
     "release": "lerna publish",
@@ -15,8 +14,11 @@
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "husky": "^7.0.2",
-    "lerna": "^6.1.0",
+    "lerna": "^7.4.1",
     "prettier": "^3.0.3"
   },
+  "workspaces": [
+    "./packages/*"
+  ],
   "license": "MIT"
 }

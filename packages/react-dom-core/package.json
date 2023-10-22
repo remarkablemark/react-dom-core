@@ -3,11 +3,9 @@
   "version": "0.1.2",
   "description": "Copy of react-dom 15",
   "scripts": {
-    "build": "npm run copy && npm run replace",
+    "build": "scripts/copy.sh && scripts/replace.sh",
     "clean": "rm -rf dist lib index.js server.js test-utils.js",
-    "copy": "cd node_modules/react-dom && cp -r dist lib index.js server.js test-utils.js ../..",
-    "prepublishOnly": "npm run clean && npm run build",
-    "replace": "scripts/replace.sh"
+    "prepublishOnly": "npm run clean && npm run build && rm -rf scripts"
   },
   "repository": {
     "type": "git",
