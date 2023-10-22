@@ -1,9 +1,5 @@
 {
   "command": {
-    "bootstrap": {
-      "hoist": true,
-      "nohoist": "react*"
-    },
     "publish": {
       "conventionalCommits": true,
       "createRelease": "github",
@@ -21,6 +17,6 @@
       "allowBranch": "master"
     }
   },
-  "packages": ["packages/*"],
-  "version": "independent"
+  "version": "independent",
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
 }
