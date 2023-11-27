@@ -34,7 +34,7 @@
     "/lib"
   ],
   "devDependencies": {
-    "@rollup/plugin-alias": "5.0.1",
+    "@rollup/plugin-alias": "5.1.0",
     "@rollup/plugin-sucrase": "5.0.2",
     "eslint": "8.54.0",
     "eslint-plugin-ft-flow": "3.0.1",
