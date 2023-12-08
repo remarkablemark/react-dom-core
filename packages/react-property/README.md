@@ -4,7 +4,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/react-property.svg)](https://www.npmjs.com/package/react-property)
 
-HTML and SVG DOM properties used by [React](https://github.com/facebook/react). See [DOMProperty](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/DOMProperty.js) and [possibleStandardNames](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/possibleStandardNames.js).
+HTML and SVG DOM properties used by [React](https://github.com/facebook/react). See [DOMProperty](https://github.com/facebook/react/blob/main/packages/react-dom/src/shared/DOMProperty.js) and [possibleStandardNames](https://github.com/facebook/react/blob/main/packages/react-dom-bindings/src/shared/possibleStandardNames.js).
 
 Try [Replit](https://replit.com/@remarkablemark/react-property) demo.
 
