@@ -6,7 +6,7 @@
     "changed": "lerna changed",
     "clean": "lerna clean --yes && lerna run clean",
     "lint": "lerna run lint",
-    "postinstall": "husky install",
+    "prepare": "husky",
     "release": "lerna publish",
     "test": "lerna run test"
   },
