@@ -44,7 +44,7 @@
     "eslint-plugin-prettier": "5.5.1",
     "globals": "16.2.0",
     "hermes-eslint": "0.29.0",
-    "jest": "30.0.2",
+    "jest": "30.0.3",
     "prettier": "3.6.1",
     "rollup": "4.44.0",
     "typescript": "5.8.3"
