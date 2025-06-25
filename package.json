@@ -15,7 +15,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "husky": "9.1.7",
     "lerna": "8.2.2",
-    "prettier": "3.6.0"
+    "prettier": "3.6.1"
   },
   "workspaces": [
     "./packages/*"
