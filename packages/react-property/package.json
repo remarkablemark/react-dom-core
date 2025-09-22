@@ -43,7 +43,7 @@
     "eslint-plugin-ft-flow": "3.0.11",
     "eslint-plugin-prettier": "5.5.4",
     "globals": "16.4.0",
-    "hermes-eslint": "0.32.0",
+    "hermes-eslint": "0.32.1",
     "jest": "30.0.5",
     "prettier": "3.6.2",
     "rollup": "4.51.0",
