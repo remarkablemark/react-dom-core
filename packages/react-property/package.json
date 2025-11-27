@@ -45,7 +45,7 @@
     "globals": "16.5.0",
     "hermes-eslint": "0.32.1",
     "jest": "30.2.0",
-    "prettier": "3.6.2",
+    "prettier": "3.7.1",
     "rollup": "4.53.3",
     "typescript": "5.8.3"
   },
