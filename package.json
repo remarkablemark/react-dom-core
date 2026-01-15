@@ -16,7 +16,7 @@
     "@types/node": "25.0.8",
     "husky": "9.1.7",
     "lerna": "9.0.3",
-    "prettier": "3.7.4"
+    "prettier": "3.8.0"
   },
   "workspaces": [
     "./packages/*"
