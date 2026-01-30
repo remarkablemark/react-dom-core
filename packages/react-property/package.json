@@ -34,7 +34,7 @@
     "/lib"
   ],
   "devDependencies": {
-    "@eslint/compat": "2.0.1",
+    "@eslint/compat": "2.0.2",
     "@eslint/eslintrc": "3.3.3",
     "@eslint/js": "9.39.2",
     "@rollup/plugin-alias": "6.0.0",
