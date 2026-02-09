@@ -39,7 +39,7 @@
     "@eslint/js": "10.0.1",
     "@rollup/plugin-alias": "6.0.0",
     "@rollup/plugin-sucrase": "5.0.2",
-    "eslint": "9.39.2",
+    "eslint": "10.0.0",
     "eslint-plugin-ft-flow": "3.0.11",
     "eslint-plugin-prettier": "5.5.5",
     "globals": "17.3.0",
