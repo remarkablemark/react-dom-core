@@ -35,7 +35,7 @@
   ],
   "devDependencies": {
     "@eslint/compat": "2.0.3",
-    "@eslint/eslintrc": "3.3.4",
+    "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "10.0.1",
     "@rollup/plugin-alias": "6.0.0",
     "@rollup/plugin-sucrase": "5.1.0",
