@@ -46,7 +46,7 @@
     "hermes-eslint": "0.34.0",
     "jest": "30.3.0",
     "prettier": "3.8.1",
-    "rollup": "4.59.0",
+    "rollup": "4.60.0",
     "typescript": "6.0.2"
   },
   "license": "MIT"
