@@ -3,6 +3,9 @@
 [![NPM](https://nodei.co/npm/react-property.png)](https://nodei.co/npm/react-property/)
 
 [![NPM version](https://img.shields.io/npm/v/react-property.svg)](https://www.npmjs.com/package/react-property)
+[![build](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/react-dom-core/graph/badge.svg?token=7SBKW68CLE)](https://codecov.io/gh/remarkablemark/react-dom-core)
+[![NPM downloads](https://img.shields.io/npm/dm/react-property)](https://www.npmjs.com/package/react-property)
 
 HTML and SVG DOM properties used by [React](https://github.com/facebook/react). See [DOMProperty](https://github.com/facebook/react/blob/v16.14.0/packages/react-dom/src/shared/DOMProperty.js) and [possibleStandardNames](https://github.com/facebook/react/blob/v16.14.0/packages/react-dom/src/shared/possibleStandardNames.js).
 
