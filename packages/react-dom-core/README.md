@@ -3,6 +3,9 @@
 [![NPM](https://nodei.co/npm/react-dom-core.png)](https://nodei.co/npm/react-dom-core/)
 
 [![NPM version](https://img.shields.io/npm/v/react-dom-core.svg)](https://www.npmjs.com/package/react-dom-core)
+[![build](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablemark/react-dom-core/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/remarkablemark/react-dom-core/graph/badge.svg?token=7SBKW68CLE)](https://codecov.io/gh/remarkablemark/react-dom-core)
+[![NPM downloads](https://img.shields.io/npm/dm/react-dom-core)](https://www.npmjs.com/package/react-dom-core)
 
 Copy of [react-dom@15](https://unpkg.com/react-dom@15/).
 
